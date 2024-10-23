@@ -1,0 +1,19 @@
+services:
+  server:
+    build:
+      context: .
+    container_name: minin_lib
+    ports:
+      - "8080:8080"
+    depends_on:
+      - dp
+  dp:
+    image: 'postgres:17-alpine'
+    container_name: db
+    environment:
+      POSTGRES_DB: "library"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_ROOT_PASSWORD: "postgres"
+    ports:
+      - "5432:5432"

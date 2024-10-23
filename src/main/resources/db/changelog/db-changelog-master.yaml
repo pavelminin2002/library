@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: migrations/CREATE_BOOK_TABLE.sql
+      relativeToChangelogFile: true
+  - include:
+      file: migrations/CREATE_CONSUMER_TABLE.sql
+      relativeToChangelogFile: true
+  - include:
+      file: migrations/CREATE_ORDER_TABLE.sql
+      relativeToChangelogFile: true
